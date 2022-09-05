@@ -6,9 +6,15 @@ namespace BelajarLogicCs
 	{
 		static void Main(string[] args)
 		{
-			TwoSumMethod();
+
+			//Uncomment one of these below:
+
+			//TwoSumMethod();
+			IsPolindromeMethod();
+
 		}
 
+		#region Two Sum
 		private static void TwoSumMethod()
 		{
 			//Two Sums
@@ -51,6 +57,38 @@ namespace BelajarLogicCs
 
 		}
 
+		#endregion
+
+		#region is Polindrome?
+
+		public static void IsPolindromeMethod()
+		{
+			int input = int.Parse(Console.ReadLine());
+			Console.WriteLine(IsPalindrome(input));
+		}
+		public static bool IsPalindrome(int x)
+		{
+
+			string reversed = "";
+			string str = x.ToString();
+			int strLength = str.Length - 1;
+
+			while (strLength >= 0)
+			{
+				reversed += str[strLength];
+				strLength--;
+			}
+
+			if(str == reversed)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		#endregion
 
 	}
 
